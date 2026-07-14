@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
-import { getVendedores, createVendedor, updateVendedor, deleteVendedor, type CreateVendedorInput, type UpdateVendedorInput } from "@/features/vendedores/api/vendedores"
+import { getVendedores, createVendedor, updateVendedor, deleteVendedor } from "@/features/vendedores/api/vendedores"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Skeleton } from "@/components/ui/skeleton"
 import { Button } from "@/components/ui/button"
@@ -36,7 +36,7 @@ export default function Vendedores() {
   const [password, setPassword] = useState("")
   const [estadoActivo, setEstadoActivo] = useState(true)
 
-  const { data: vendedores, isLoading, isError } = useQuery({
+  const { data: vendedores, isLoading } = useQuery({
     queryKey: ["vendedores"],
     queryFn: getVendedores,
   })

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
-import { getClientes, createCliente, updateCliente, deleteCliente, type CreateClienteInput, type UpdateClienteInput } from "@/features/clientes/api/clientes"
+import { getClientes, createCliente, updateCliente, deleteCliente} from "@/features/clientes/api/clientes"
 import { getVendedores } from "@/features/vendedores/api/vendedores"
 import { cn } from "@/lib/utils"
 
